@@ -1,8 +1,9 @@
 const navbarNav = document.querySelector(".navbar-nav");
 const shoppingCart = document.querySelector(".shopping-cart");
 //ketika hambuger menu di klik
-document.querySelector("#hamburger-menu").onclick = () => {
+document.querySelector("#hamburger-menu").onclick = (e) => {
   navbarNav.classList.toggle("active");
+  e.preventDefault();
 };
 
 document.querySelector("#shopping").onclick = (e) => {
@@ -34,21 +35,158 @@ document.addEventListener("click", function (e) {
     shoppingCart.classList.remove("active");
   }
 });
-// modal box
-const itemDetailModal = document.querySelector("#item");
-const itemDetailButton = document.querySelector(".item-detail-button");
 
-itemDetailButton.onclick = (e) => {
-  itemDetailModal.style.display = "flex";
+// modal box
+const itemDetailModal1 = document.querySelector("#item1");
+const itemDetailButtons1 = document.querySelectorAll(".item-detail-button1");
+itemDetailButtons1.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal1.style.display = "flex";
+    e.preventDefault();
+  };
+});
+document.querySelector(".modal .keluar1").onclick = (e) => {
+  itemDetailModal1.style.display = none;
   e.preventDefault();
 };
-document.querySelector(".modal. keluae").onclick = (e) => {
-  itemDetailModal.style.display = none;
+// klik tombol keluar
+document.querySelector(".modal .keluar1").onclick = (e) => {
+  itemDetailModal1.style.display = "none";
+  e.preventDefault();
+};
+window.onclick = (e) => {
+  if (e.target === itemDetailModal1) {
+    itemDetailModal1.style.display = "none";
+  }
+};
+
+const itemDetailModal2 = document.querySelector("#item2");
+const itemDetailButtons2 = document.querySelectorAll(".item-detail-button2");
+itemDetailButtons2.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal2.style.display = "flex";
+    e.preventDefault();
+  };
+});
+document.querySelector(".modal .keluar2").onclick = (e) => {
+  itemDetailModal2.style.display = none;
+  e.preventDefault();
+};
+// klik tombol keluar
+document.querySelector(".modal .keluar2").onclick = (e) => {
+  itemDetailModal2.style.display = "none";
+  e.preventDefault();
+};
+window.onclick = (e) => {
+  if (e.target === itemDetailModal2) {
+    itemDetailModal2.style.display = "none";
+  }
+};
+
+const itemDetailModal3 = document.querySelector("#item3");
+const itemDetailButtons3 = document.querySelectorAll(".item-detail-button3");
+itemDetailButtons3.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal3.style.display = "flex";
+    e.preventDefault();
+  };
+});
+document.querySelector(".modal .keluar3").onclick = (e) => {
+  itemDetailModal3.style.display = none;
+  e.preventDefault();
+};
+// klik tombol keluar
+document.querySelector(".modal .keluar3").onclick = (e) => {
+  itemDetailModal3.style.display = "none";
+  e.preventDefault();
+};
+window.onclick = (e) => {
+  if (e.target === itemDetailModal3) {
+    itemDetailModal3.style.display = "none";
+  }
+};
+
+const itemDetailModal4 = document.querySelector("#item4");
+const itemDetailButtons4 = document.querySelectorAll(".item-detail-button4");
+itemDetailButtons4.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal4.style.display = "flex";
+    e.preventDefault();
+  };
+});
+document.querySelector(".modal .keluar4").onclick = (e) => {
+  itemDetailModal4.style.display = none;
+  e.preventDefault();
+};
+// klik tombol keluar
+document.querySelector(".modal .keluar4").onclick = (e) => {
+  itemDetailModal4.style.display = "none";
+  e.preventDefault();
+};
+window.onclick = (e) => {
+  if (e.target === itemDetailModal4) {
+    itemDetailModal4.style.display = "none";
+  }
+};
+
+const itemDetailModal5 = document.querySelector("#item5");
+const itemDetailButtons5 = document.querySelectorAll(".item-detail-button5");
+itemDetailButtons5.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal5.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+document.querySelector(".modal .keluar5").onclick = (e) => {
+  itemDetailModal5.style.display = none;
   e.preventDefault();
 };
 
 // klik tombol keluar
-document.querySelector(".modal .keluar").onclick = (e) => {
-  itemDetailModal.style.display = "none";
+document.querySelector(".modal .keluar5").onclick = (e) => {
+  itemDetailModal5.style.display = "none";
   e.preventDefault();
 };
+
+window.onclick = (e) => {
+  if (e.target === itemDetailModal5) {
+    itemDetailModal5.style.display = "none";
+  }
+};
+
+const itemDetailModal6 = document.querySelector("#item6");
+const itemDetailButtons6 = document.querySelectorAll(".item-detail-button6");
+
+itemDetailButtons6.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal6.style.display = "flex";
+    e.preventDefault();
+  };
+});
+
+document.querySelector(".modal .keluar6").onclick = (e) => {
+  itemDetailModal6.style.display = none;
+  e.preventDefault();
+};
+
+// klik tombol keluar
+document.querySelector(".modal .keluar6").onclick = (e) => {
+  itemDetailModal6.style.display = "none";
+  e.preventDefault();
+};
+
+window.onclick = (e) => {
+  if (e.target === itemDetailModal6) {
+    itemDetailModal6.style.display = "none";
+  }
+};
+
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 500) {
+    navbar.style.backgroundColor = "rgb(1, 1, 1, 0.7)";
+  } else {
+    navbar.style.backgroundColor = "rgb(1, 1, 1, 0.7)";
+  }
+});
